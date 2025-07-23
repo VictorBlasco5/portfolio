@@ -1,8 +1,8 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from '../styles/home.module.css';
 
 export default function Home() {
   return (
-    <h1>Víctor Blasco Pérez - Full Stack Develloper</h1>
+    <h1 className={styles.name}>Víctor Blasco Pérez - Full Stack Develloper</h1>
   );
 }
