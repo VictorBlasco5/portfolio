@@ -3,7 +3,6 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div>HOLA
-    </div>
+    <h1>Víctor Blasco Pérez - Full Stack Develloper</h1>
   );
 }
