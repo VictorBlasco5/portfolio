@@ -1,8 +1,24 @@
+import Link from 'next/link';
+import '../../styles/header.css';
+
+
 export default function Header() {
-  return (
-    <header style={{ background: '#111', color: '#fff', padding: '1rem' }}>
-      <h1>Victor</h1>
-      {/* Aquí podrías añadir la navegación */}
-    </header>
-  );
+    return (
+        <header className='navbar'>
+            <nav>
+                <ul className='navbar-link'>
+                    {['/', '/about', '/projects', '/contact'].map((href, i) => {
+                        const labels = ['Home', 'Sobre mí', 'Proyectos', 'Contacto'];
+                        return (
+                            <li  key={href}>
+                                <Link className='links' href={href}>
+                                    {labels[i]}
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </nav>
+        </header>
+    );
 }
