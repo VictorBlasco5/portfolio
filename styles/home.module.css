@@ -4,16 +4,24 @@
   align-items: center;
   justify-content: center;
   color:#000000;
-  height: 50vh;
+  font-size: 50px;
+}
+
+.textHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: none;
+  font-size: 18px;
 }
 
 /* ABOUT ME */
-.aboutSection {
+.container {
   padding: 4rem 2rem;
-  max-width: 900px;
   margin: auto;
   color: #f4f4f5;
-  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid blue;
 }
 
 .title {
@@ -23,26 +31,34 @@
   font-weight: 600;
   color: black;
 }
-
-.card {
-  background-color: #1e1e20;
-  padding: 2rem;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.boxTrajectory {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+.trajectory {
+  color: black;
+  border:1px solid red;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 49rem;
+}
+
+.titleStack {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5em;
 }
 
 .icon {
   width: 32px;
   height: 32px;
-  color: #00bfa6;
-  margin-bottom: 1rem;
+  color: #010101;
 }
 
 .techGrid {
@@ -50,13 +66,18 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 1rem;
+  width: 50em;
 }
 
 .techItem {
-  background: #2c2c2e;
-  padding: 0.5rem 1rem;
+  color: black;
+  padding: 1rem 1rem;
   border-radius: 8px;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .downloadBtn {
