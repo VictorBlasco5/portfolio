@@ -1,19 +1,43 @@
 /* HOME */
-.name {
+.heroAnimatedBox {
+  width: 100%;
+  overflow: hidden;
+  background-image: url('/images/screen.png');
+  background-size: cover;
+  background-position: center;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  color:#000000;
-  font-size: 50px;
+  align-items: flex-end;
+  transition: height 0.3s ease;
+}
+
+.name {
+  font-size: 2.3rem;
+  margin: 0;
+  color: white;
+  margin-right: 50px;
+}
+
+.subname {
+  margin: 0;
+  margin-right: 50px;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: white;
+  border: 1px solid white;
+  padding: 2px 20px;
 }
 
 .textHome {
+  width: 50vw;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: #9d9d9d;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
-  font-weight: none;
-  font-size: 18px;
+  text-align: center;
 }
 
 /* ABOUT ME */
@@ -31,6 +55,7 @@
   font-weight: 600;
   color: black;
 }
+
 .boxTrajectory {
   display: flex;
   flex-direction: row;
@@ -39,7 +64,7 @@
 
 .trajectory {
   color: black;
-  border:1px solid red;
+  border: 1px solid red;
   display: flex;
   justify-content: start;
   align-items: center;

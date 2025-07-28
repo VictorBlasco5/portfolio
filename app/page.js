@@ -1,24 +1,12 @@
+"use client";
+
+import { useEffect, useState } from 'react';
 import styles from '../styles/home.module.css';
-import { Briefcase, Wrench, FileDownIcon } from 'lucide-react';
+import { Wrench, FileDownIcon } from 'lucide-react';
 import {
-  SiJavascript,
-  SiTypescript,
-  SiRedux,
-  SiReact,
-  SiCss3,
-  SiHtml5,
-  SiNextdotjs,
-  SiPhp,
-  SiLaravel,
-  SiNodedotjs,
-  SiExpress,
-  SiTypeorm,
-  SiMysql,
-  SiMongodb,
-  SiGithub,
-  SiBootstrap,
-  SiTailwindcss,
-  SiTestinglibrary,
+  SiJavascript, SiTypescript, SiRedux, SiReact, SiCss3, SiHtml5, SiNextdotjs,
+  SiPhp, SiLaravel, SiNodedotjs, SiExpress, SiTypeorm, SiMysql, SiMongodb,
+  SiGithub, SiBootstrap, SiTailwindcss, SiTestinglibrary
 } from 'react-icons/si';
 
 const techIcons = {
@@ -43,25 +31,61 @@ const techIcons = {
 };
 
 export default function Home() {
+  const [height, setHeight] = useState(300);
+
+  useEffect(() => {
+    function getMaxHeight() {
+      return window.innerWidth >= 2500 ? 500 : 400;
+    }
+
+    const minHeight = 100;
+    const scrollRange = 500;
+
+    function handleScroll() {
+      const maxHeight = getMaxHeight();
+      const scrollY = window.scrollY || window.pageYOffset;
+      const clampedScroll = Math.min(scrollY, scrollRange);
+      const factor = clampedScroll / scrollRange;
+      const newHeight = maxHeight - ((maxHeight - minHeight) * factor);
+      setHeight(newHeight);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+
+    handleScroll(); // inicial
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
     <section className={styles.container}>
-      {/* HOME */}
-      <h1 className={styles.name}>Hola! Soy Víctor Blasco.</h1>
-      <h2 className={styles.textHome}>Texto breve de intruducción para que me conozcan.</h2>
+      {/* 🔽 Bloque animado con scroll */}
+      <div
+        className={styles.heroAnimatedBox}
+        style={{
+          height: `${height}px`,
+          marginTop: `${(300 - height) / 2}px`,
+        }}
+      >
+        <h1 className={styles.name}>VÍCTOR BLASCO</h1>
+        <h4 className={styles.subname}>DESARROLLADOR WEB</h4>
+        <h2 className={styles.textHome}>Soy desarrollador web fullstack con pasión por crear soluciones digitales modernas, accesibles y eficientes. Me entusiasma transformar ideas en experiencias funcionales y bien diseñadas.</h2>
+      </div>
 
-      {/* SOBRE MI */}
+      {/* SOBRE MÍ */}
       <h1 className={styles.title}>Sobre mí</h1>
       <div className={styles.boxTrajectory}>
         <div className={styles.trajectory}>
           <p>
             Soy desarrollador web fullstack con pasión por crear soluciones digitales modernas, accesibles y eficientes. Me entusiasma transformar ideas en experiencias funcionales y bien diseñadas, cuidando tanto la parte visual como el rendimiento y la estructura técnica. <br /><br />
-
             Me formé en Geekshubs Academy, donde completé un bootcamp intensivo de desarrollo web fullstack. Durante esa etapa, trabajé con tecnologías tanto de frontend como de backend, lo que me permitió adquirir una visión completa del desarrollo de aplicaciones y consolidar buenas prácticas profesionales.<br /><br />
-
             Tras finalizar el bootcamp, trabajé durante seis meses en Lion Capital Group, donde tuve la oportunidad de desarrollar la web corporativa oficial de la empresa, actualmente en funcionamiento. Esta experiencia me permitió aplicar mis conocimientos en un entorno real y profesional, enfrentándome a desafíos técnicos y colaborando con otros equipos.
           </p>
 
-          {/* Botón de CV */}
           <div className={styles.downloadContainer}>
             <FileDownIcon className={styles.icon} />
             <a href="/cv.pdf" className={styles.downloadBtn} download>
@@ -70,9 +94,64 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bloque de tecnologías */}
         <div className={styles.technology}>
-          <h2 className={styles.titleStack} ><Wrench className={styles.icon} />Stack tecnológico</h2>
+          <h2 className={styles.titleStack}><Wrench className={styles.icon} />Stack tecnológico</h2>
+          <div className={styles.techGrid}>
+            {Object.entries(techIcons).map(([tech, IconComponent]) => (
+              <div key={tech} className={styles.techItem}>
+                {IconComponent}
+                <span>{tech}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className={styles.boxTrajectory}>
+        <div className={styles.trajectory}>
+          <p>
+            Soy desarrollador web fullstack con pasión por crear soluciones digitales modernas, accesibles y eficientes. Me entusiasma transformar ideas en experiencias funcionales y bien diseñadas, cuidando tanto la parte visual como el rendimiento y la estructura técnica. <br /><br />
+            Me formé en Geekshubs Academy, donde completé un bootcamp intensivo de desarrollo web fullstack. Durante esa etapa, trabajé con tecnologías tanto de frontend como de backend, lo que me permitió adquirir una visión completa del desarrollo de aplicaciones y consolidar buenas prácticas profesionales.<br /><br />
+            Tras finalizar el bootcamp, trabajé durante seis meses en Lion Capital Group, donde tuve la oportunidad de desarrollar la web corporativa oficial de la empresa, actualmente en funcionamiento. Esta experiencia me permitió aplicar mis conocimientos en un entorno real y profesional, enfrentándome a desafíos técnicos y colaborando con otros equipos.
+          </p>
+
+          <div className={styles.downloadContainer}>
+            <FileDownIcon className={styles.icon} />
+            <a href="/cv.pdf" className={styles.downloadBtn} download>
+              Descargar CV
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.technology}>
+          <h2 className={styles.titleStack}><Wrench className={styles.icon} />Stack tecnológico</h2>
+          <div className={styles.techGrid}>
+            {Object.entries(techIcons).map(([tech, IconComponent]) => (
+              <div key={tech} className={styles.techItem}>
+                {IconComponent}
+                <span>{tech}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className={styles.boxTrajectory}>
+        <div className={styles.trajectory}>
+          <p>
+            Soy desarrollador web fullstack con pasión por crear soluciones digitales modernas, accesibles y eficientes. Me entusiasma transformar ideas en experiencias funcionales y bien diseñadas, cuidando tanto la parte visual como el rendimiento y la estructura técnica. <br /><br />
+            Me formé en Geekshubs Academy, donde completé un bootcamp intensivo de desarrollo web fullstack. Durante esa etapa, trabajé con tecnologías tanto de frontend como de backend, lo que me permitió adquirir una visión completa del desarrollo de aplicaciones y consolidar buenas prácticas profesionales.<br /><br />
+            Tras finalizar el bootcamp, trabajé durante seis meses en Lion Capital Group, donde tuve la oportunidad de desarrollar la web corporativa oficial de la empresa, actualmente en funcionamiento. Esta experiencia me permitió aplicar mis conocimientos en un entorno real y profesional, enfrentándome a desafíos técnicos y colaborando con otros equipos.
+          </p>
+
+          <div className={styles.downloadContainer}>
+            <FileDownIcon className={styles.icon} />
+            <a href="/cv.pdf" className={styles.downloadBtn} download>
+              Descargar CV
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.technology}>
+          <h2 className={styles.titleStack}><Wrench className={styles.icon} />Stack tecnológico</h2>
           <div className={styles.techGrid}>
             {Object.entries(techIcons).map(([tech, IconComponent]) => (
               <div key={tech} className={styles.techItem}>
