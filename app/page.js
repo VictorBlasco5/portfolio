@@ -16,7 +16,7 @@ const techIcons = {
   CSS: <SiCss3 size={40} color="#414141ff" />,
   Redux: <SiRedux size={40} color="#414141ff" />,
   React: <SiReact color="#414141ff" size="40px" />,
-  'Next.js': <SiNextdotjs size="40px" />,
+  'Next.js': <SiNextdotjs size="40px" color="#414141ff" />,
   PHP: <SiPhp size={40} color="#414141ff" />,
   Laravel: <SiLaravel color="#414141ff" size="40px" />,
   'Node.js': <SiNodedotjs color="#414141ff" size="40px" />,
@@ -77,7 +77,7 @@ export default function Home() {
       </div>
 
       {/* SOBRE MÍ */}
-      <h1 className={styles.title}>Sobre mí</h1>
+      <h1 className={styles.title}>SOBRE MÍ</h1>
       <div className={styles.boxTrajectory}>
         <div className={styles.trajectory}>
           <p>
