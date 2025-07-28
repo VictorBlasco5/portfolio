@@ -1,0 +1,41 @@
+
+@font-face {
+    font-family: 'Jost-Regular';
+    src: url('/fonts/Jost-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost-Light';
+    src: url('/fonts/Jost-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* === Variables Globales === */
+:root {
+    /* === FUENTES === */
+    --font-jost-regular: 'Jost-Regular', sans-serif;
+    --font-jost-light: 'Jost-Light', sans-serif;
+
+
+
+
+
+
+    /* === COLORES GENERALES === */
+    --main-bg-color: #0F0F38;
+    --main-text-color: #0F0F38;
+    --main-text-secondary-color: white;
+    --main-text-tertiary-color: #8B8B99;
+
+    /* === BOTONES === */
+    --btn-primary-bg: #0F0F38;
+    --btn-primary-text-color: #fff;
+    --btn-secondary-bg: #fff;
+    --btn-secondary-text-color: #0C1036;
+}
