@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <section className={styles.container}>
-      {/* 🔽 Bloque animado con scroll */}
+      {/* HOME */}
       <div
         className={styles.heroAnimatedBox}
         style={{
@@ -106,6 +106,39 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* PROYECTOS */}
+      <h1 className={styles.title}>PROYECTOS</h1>
+      <div className={styles.proyects}>
+        <div className={styles.card}>
+          <div className={styles.boxCard}>
+            <div className={styles.cardFront}>
+              <img src="images/lion3.png" alt="Lion Project" />
+            </div>
+            <div className={styles.cardBack}>
+              <img src="images/filter-lion.png" alt="Lion Project Filtered" />
+            </div>
+          </div>
+          <a href="https://lioncapitalg.com" target="_blank" rel="noopener noreferrer" className={styles.buttonLive}>
+            Live
+          </a>
+        </div>
+
+        <div className={styles.card}>
+          <div className={styles.boxCard}>
+            <div className={styles.cardFront}>
+              <img src="images/home-dunk.jpg" alt="Dunk Project" />
+            </div>
+            <div className={styles.cardBack}>
+              <img src="images/dunk.jpg" alt="Dunk Project Alt" />
+            </div>
+          </div>
+          <a href="https://lioncapitalg.com" target="_blank" rel="noopener noreferrer" className={styles.buttonLive}>
+            Live
+          </a>
+        </div>
+      </div>
+
     </section>
   );
 }

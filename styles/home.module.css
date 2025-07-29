@@ -131,3 +131,63 @@
 .downloadBtn:hover {
   background-color: #656565;
 }
+
+/* PROYECTS */
+.card {
+  display: flex;
+  align-items: center;
+  perspective: 1000px;
+  margin: 5rem;
+  display: flex;
+  gap: 20em;
+  border: 1px solid green;
+}
+
+.boxCard {
+  position: relative;
+  width: 700px;
+  height: 300px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+ .boxCard:hover{
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.cardFront, .cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.cardFront img,
+.cardBack img {
+  width: 100%;
+  height: 100%;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+}
+
+.buttonLive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 200px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: #9d9d9d;
+  font-size: 20px;
+  font-family: var(--font-jost-regular);
+  background-color: #444444;
+}
+
+.buttonLive:hover {
+  background-color: #636363;
+}
