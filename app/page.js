@@ -65,6 +65,7 @@ export default function Home() {
     <section className={styles.container}>
       {/* HOME */}
       <div
+      id="home"
         className={styles.heroAnimatedBox}
         style={{
           height: `${height}px`,
@@ -77,7 +78,7 @@ export default function Home() {
       </div>
 
       {/* SOBRE MÍ */}
-      <h1 className={styles.title}>SOBRE MÍ</h1>
+      <h1 id="about"  className={styles.title}>SOBRE MÍ</h1>
       <div className={styles.boxTrajectory}>
         <div className={styles.trajectory}>
           <p>
@@ -108,8 +109,8 @@ export default function Home() {
       </div>
 
       {/* PROYECTOS */}
-      <h1 className={styles.title}>PROYECTOS</h1>
-      <div className={styles.proyects}>
+      <h1 id="projects" className={styles.title}>PROYECTOS</h1>
+      <div  className={styles.proyects}>
         <div className={styles.card}>
           <div className={styles.boxCard}>
             <div className={styles.cardFront}>

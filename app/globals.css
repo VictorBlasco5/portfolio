@@ -1,3 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#home,
+#about,
+#projects,
+#contact {
+  scroll-margin-top: 130px; /* Ajusta el valor según tu header */
+}
+
 
 @font-face {
     font-family: 'Jost-Regular';
