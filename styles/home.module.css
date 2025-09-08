@@ -29,7 +29,7 @@
   border: 1px solid white;
   padding: 2px 20px;
   font-family: var(--font-jost-light);
-  
+
 }
 
 .textHome {
@@ -79,8 +79,6 @@
   width: 49rem;
   font-family: var(--font-jost-regular);
   font-size: 1.1rem;
-
-
 }
 
 .titleStack {
@@ -124,7 +122,6 @@
   background-color: #444444;
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border-radius: 999px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -151,7 +148,8 @@
   width: 700px;
   height: 300px;
   transform-style: preserve-3d;
-  transition: transform 0.8s ease-in-out; /* animación más estable */
+  transition: transform 0.8s ease-in-out;
+  /* animación más estable */
 }
 
 .card:hover .boxCard {
@@ -187,12 +185,74 @@
   width: 200px;
   border: 1px solid black;
   text-decoration: none;
-  color: #9d9d9d;
+  color: white;
+  font-size: 20px;
+  font-family: var(--font-jost-regular);
+  background-color: #444444;
+
+}
+
+.buttonLive:hover {
+  background-color: #636363;
+}
+
+/* CONTACT */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 50em;
+  height: auto;
+  padding: 4em 0em;
+  color: black;
+  gap: 2em;
+  background-color: #f5f5f5;
+}
+
+.form .label {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form .name,
+.form .email {
+  color: black;
+  width: 35em;
+  height: auto;
+  margin: 0;
+  font-size: 14px;
+  padding: 0.5em;
+  box-sizing: border-box;
+  font-family: var(--font-jost-light);
+}
+
+.form .text {
+  color: black;
+  width: 10em;
+  resize: none;
+  font-size: 14px;
+  font-family: var(--font-jost-light);
+  padding: 0.5em;
+}
+
+.buttonSend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 200px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: white;
   font-size: 20px;
   font-family: var(--font-jost-regular);
   background-color: #444444;
 }
 
-.buttonLive:hover {
+.buttonSend:hover {
   background-color: #636363;
 }

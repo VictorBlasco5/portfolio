@@ -65,7 +65,7 @@ export default function Home() {
     <section className={styles.container}>
       {/* HOME */}
       <div
-      id="home"
+        id="home"
         className={styles.heroAnimatedBox}
         style={{
           height: `${height}px`,
@@ -78,7 +78,7 @@ export default function Home() {
       </div>
 
       {/* SOBRE MÍ */}
-      <h1 id="about"  className={styles.title}>SOBRE MÍ</h1>
+      <h1 id="about" className={styles.title}>SOBRE MÍ</h1>
       <div className={styles.boxTrajectory}>
         <div className={styles.trajectory}>
           <p>
@@ -110,7 +110,7 @@ export default function Home() {
 
       {/* PROYECTOS */}
       <h1 id="projects" className={styles.title}>PROYECTOS</h1>
-      <div  className={styles.proyects}>
+      <div className={styles.proyects}>
         <div className={styles.card}>
           <div className={styles.boxCard}>
             <div className={styles.cardFront}>
@@ -139,6 +139,45 @@ export default function Home() {
           </a>
         </div>
       </div>
+
+      {/* CONTACTO */}
+      <h1 id="contact" className={styles.title}>CONTACTO</h1>
+
+        <form className={styles.form}>
+          <label className={styles.label}>
+            Nombre
+            <input
+              type="text"
+              className={styles.name}
+              placeholder="Escribe tu nombre"
+              required
+            />
+          </label>
+
+          <label className={styles.label}>
+            Email
+            <input
+              type="email"
+              className={styles.name}
+              placeholder="ejemplo@correo.com"
+              required
+            />
+          </label>
+
+          <label className={styles.label}>
+            Mensaje
+            <textarea
+              className={styles.text}
+              placeholder="Escribe tu mensaje"
+              rows="5"
+              required
+            />
+          </label>
+
+          <button type="submit" className={styles.buttonSend}>
+            Enviar
+          </button>
+        </form>
 
     </section>
   );
