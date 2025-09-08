@@ -50,7 +50,6 @@
   padding: 4rem 0rem;
   margin: auto;
   color: #f4f4f5;
-  border: 1px solid blue;
 }
 
 .title {
@@ -66,12 +65,10 @@
   display: flex;
   flex-direction: row;
   gap: 5rem;
-  border: 1px solid green;
 }
 
 .trajectory {
   color: black;
-  border: 1px solid red;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -107,7 +104,6 @@
 .techItem {
   color: black;
   padding: 1rem 1rem;
-  border-radius: 8px;
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;
@@ -183,7 +179,6 @@
   justify-content: center;
   height: 40px;
   width: 200px;
-  border: 1px solid black;
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -216,6 +211,7 @@
   align-items: flex-start;
   flex-direction: column;
   gap: 1em;
+  font-family: var(--font-jost-regular);
 }
 
 .form .name,
@@ -232,7 +228,7 @@
 
 .form .text {
   color: black;
-  width: 10em;
+  width: 34em;
   resize: none;
   font-size: 14px;
   font-family: var(--font-jost-light);
@@ -245,12 +241,12 @@
   justify-content: center;
   height: 40px;
   width: 200px;
-  border: 1px solid black;
   text-decoration: none;
   color: white;
   font-size: 20px;
   font-family: var(--font-jost-regular);
   background-color: #444444;
+  border: none;
 }
 
 .buttonSend:hover {

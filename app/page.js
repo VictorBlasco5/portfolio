@@ -88,7 +88,6 @@ export default function Home() {
           </p>
 
           <div className={styles.downloadContainer}>
-            <FileDownIcon className={styles.icon} />
             <a href="/cv.pdf" className={styles.downloadBtn} download>
               Descargar CV
             </a>
