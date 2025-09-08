@@ -119,10 +119,10 @@ export default function Home() {
               <img src="images/filter-lion.png" alt="Lion Project Filtered" />
             </div>
           </div>
-          <a href="https://lioncapitalg.com" target="_blank" rel="noopener noreferrer" className={styles.buttonLive}>
-            Live
-          </a>
         </div>
+        <a href="https://lioncapitalg.com" target="_blank" rel="noopener noreferrer" className={styles.buttonLive}>
+          Live
+        </a>
 
         <div className={styles.card}>
           <div className={styles.boxCard}>
@@ -133,50 +133,50 @@ export default function Home() {
               <img src="images/dunk.jpg" alt="Dunk Project Alt" />
             </div>
           </div>
-          <a href="https://lioncapitalg.com" target="_blank" rel="noopener noreferrer" className={styles.buttonLive}>
-            Live
-          </a>
         </div>
+        <a href="https://lioncapitalg.com" target="_blank" rel="noopener noreferrer" className={styles.buttonLive}>
+          Live
+        </a>
       </div>
 
       {/* CONTACTO */}
       <h1 id="contact" className={styles.title}>CONTACTO</h1>
 
-        <form className={styles.form}>
-          <label className={styles.label}>
-            Nombre
-            <input
-              type="text"
-              className={styles.name}
-              placeholder="Escribe tu nombre"
-              required
-            />
-          </label>
+      <form className={styles.form}>
+        <label className={styles.label}>
+          Nombre
+          <input
+            type="text"
+            className={styles.name}
+            placeholder="Escribe tu nombre"
+            required
+          />
+        </label>
 
-          <label className={styles.label}>
-            Email
-            <input
-              type="email"
-              className={styles.name}
-              placeholder="ejemplo@correo.com"
-              required
-            />
-          </label>
+        <label className={styles.label}>
+          Email
+          <input
+            type="email"
+            className={styles.name}
+            placeholder="ejemplo@correo.com"
+            required
+          />
+        </label>
 
-          <label className={styles.label}>
-            Mensaje
-            <textarea
-              className={styles.text}
-              placeholder="Escribe tu mensaje"
-              rows="5"
-              required
-            />
-          </label>
+        <label className={styles.label}>
+          Mensaje
+          <textarea
+            className={styles.text}
+            placeholder="Escribe tu mensaje"
+            rows="5"
+            required
+          />
+        </label>
 
-          <button type="submit" className={styles.buttonSend}>
-            Enviar
-          </button>
-        </form>
+        <button type="submit" className={styles.buttonSend}>
+          Enviar
+        </button>
+      </form>
 
     </section>
   );

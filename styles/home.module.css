@@ -127,13 +127,20 @@
 }
 
 /* PROYECTS */
+.proyects {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   perspective: 1000px;
-  margin: 5rem auto;
+  margin: 2rem auto;
   display: flex;
   max-width: 44em;
   gap: 2em;
@@ -184,7 +191,7 @@
   font-size: 20px;
   font-family: var(--font-jost-regular);
   background-color: #444444;
-
+  margin-bottom: 2em;
 }
 
 .buttonLive:hover {
