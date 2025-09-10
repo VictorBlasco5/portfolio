@@ -259,3 +259,18 @@
 .buttonSend:hover {
   background-color: #636363;
 }
+
+.sendingMessage {
+  color: black;
+  font-family: var(--font-jost-regular);
+}
+
+.successMessage {
+  color: black;
+  font-family: var(--font-jost-regular);
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-family: var(--font-jost-regular);
+}

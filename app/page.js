@@ -81,12 +81,12 @@ export default function Home() {
       const data = await res.json();
 
       if (data.success) {
-        setStatus("✅ Mensaje enviado");
+        setStatus(" Mensaje enviado ✅");
         setFormData({ name: "", email: "", message: "" });
 
         setTimeout(() => {
           setStatus("");
-        }, 4000);
+        }, 5000);
       } else {
         setStatus("❌ Error al enviar");
       }
@@ -219,7 +219,21 @@ export default function Home() {
         <button type="submit" className={styles.buttonSend}>
           Enviar
         </button>
-        <p>{status}</p>
+        <p
+          className={
+            status === "Enviando..."
+              ? styles.sendingMessage
+              : status.includes("✅")
+                ? styles.successMessage
+                : status.includes("❌")
+                  ? styles.errorMessage
+                  : ""
+          }
+        >
+          {status}
+        </p>
+
+
       </form>
 
     </section>
