@@ -32,6 +32,8 @@ const techIcons = {
 
 export default function Home() {
   const [height, setHeight] = useState(300);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     function getMaxHeight() {
@@ -53,13 +55,45 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleScroll);
 
-    handleScroll(); // inicial
+    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
     };
   }, []);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Enviando...");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setStatus("✅ Mensaje enviado");
+        setFormData({ name: "", email: "", message: "" });
+
+        setTimeout(() => {
+          setStatus("");
+        }, 4000);
+      } else {
+        setStatus("❌ Error al enviar");
+      }
+    } catch (error) {
+      setStatus("❌ Error en el servidor");
+    }
+  };
 
   return (
     <section className={styles.container}>
@@ -142,11 +176,14 @@ export default function Home() {
       {/* CONTACTO */}
       <h1 id="contact" className={styles.title}>CONTACTO</h1>
 
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <label className={styles.label}>
           Nombre
           <input
             type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
             className={styles.name}
             placeholder="Escribe tu nombre"
             required
@@ -157,6 +194,9 @@ export default function Home() {
           Email
           <input
             type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             className={styles.name}
             placeholder="ejemplo@correo.com"
             required
@@ -166,6 +206,9 @@ export default function Home() {
         <label className={styles.label}>
           Mensaje
           <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             className={styles.text}
             placeholder="Escribe tu mensaje"
             rows="5"
@@ -176,6 +219,7 @@ export default function Home() {
         <button type="submit" className={styles.buttonSend}>
           Enviar
         </button>
+        <p>{status}</p>
       </form>
 
     </section>
