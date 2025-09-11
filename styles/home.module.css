@@ -59,6 +59,7 @@
   font-weight: 600;
   color: black;
   font-family: var(--font-jost-regular);
+  padding-top: 30px;
 }
 
 .boxTrajectory {
