@@ -1,25 +1,17 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
   try {
     const { name, email, message } = await req.json();
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-      }
-    });
-
-    await transporter.sendMail({
-      from: email,
-      to: process.env.EMAIL_USER,
-      subject: `PORTFOLIO`,
-      text: `Nombre: ${name}
-            Email: ${email}
-            Mensaje: ${message}`,
-      replyTo: email
+    await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>", // remitente de prueba gratuito
+      to: process.env.EMAIL_TO, // tu correo real donde recibirás los mensajes
+      subject: "Nuevo mensaje del portfolio",
+      text: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`,
+      replyTo: email, // el correo de quien envía el formulario
     });
 
     return new Response(
