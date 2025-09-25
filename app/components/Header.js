@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className={styles.navbar}>
-      <nav>
+      {/* <nav>
         <ul className={styles['navbar-link']}>
           {links.map((href, i) => (
             <li key={href}>
@@ -19,7 +19,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
-      </nav>
+      </nav> */}
     </header>
   );
 }

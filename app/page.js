@@ -52,15 +52,19 @@ export default function Home() {
       setHeight(newHeight);
     }
 
+  // Desactivar scroll animado en móviles
+  if (window.innerWidth > 768) {
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleScroll);
-
     handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
     };
+  } else {
+    setHeight(300); // altura fija en móvil
+  }
   }, []);
 
   const handleChange = (e) => {
