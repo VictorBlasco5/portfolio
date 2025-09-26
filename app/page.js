@@ -126,7 +126,7 @@ export default function Home() {
           </p>
 
           <div className={styles.downloadContainer}>
-            <a href="/cv.pdf" className={styles.downloadBtn} download>
+            <a href="/Víctor Blasco CV.pdf" className={styles.downloadBtn} download>
               Descargar CV
             </a>
           </div>
