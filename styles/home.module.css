@@ -401,17 +401,18 @@
   .form .email{
     width: 90%;
     font-size: 14px;
+    text-align: left;
   }
 
   .form .text {
     width: 85%;
     font-size: 14px;
   }
+  
 
   .buttonSend {
     width: 120px;
     height: 35px;
     font-size: 0.9rem;
-
   }
 }
