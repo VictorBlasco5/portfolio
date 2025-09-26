@@ -60,6 +60,7 @@
 }
 
 .hamburger span {
+  display: none;
   position: absolute;
   width: 100%;
   height: 2px;
@@ -128,7 +129,7 @@
     padding: 1rem 0;
   }
 
-  .hamburger {
+  .hamburger span {
     display: flex;
   }
 }
