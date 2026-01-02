@@ -122,7 +122,7 @@ export default function Home() {
           <p>
             Soy desarrollador web fullstack con pasión por crear soluciones digitales modernas, accesibles y eficientes. Me entusiasma transformar ideas en experiencias funcionales y bien diseñadas, cuidando tanto la parte visual como el rendimiento y la estructura técnica. <br /><br />
             Me formé en Geekshubs Academy, donde completé un bootcamp intensivo de desarrollo web fullstack. Durante esa etapa, trabajé con tecnologías tanto de frontend como de backend, lo que me permitió adquirir una visión completa del desarrollo de aplicaciones y consolidar buenas prácticas profesionales.<br /><br />
-            Tras finalizar el bootcamp, trabajé durante seis meses en Lion Capital Group, donde tuve la oportunidad de desarrollar la web corporativa oficial de la empresa, actualmente en funcionamiento. Esta experiencia me permitió aplicar mis conocimientos en un entorno real y profesional, enfrentándome a desafíos técnicos y colaborando con otros equipos.
+            Tras finalizar el bootcamp, trabajé durante siete meses en Lion Capital Group, donde tuve la oportunidad de desarrollar la web corporativa oficial de la empresa, actualmente en funcionamiento. Esta experiencia me permitió aplicar mis conocimientos en un entorno real y profesional, enfrentándome a desafíos técnicos y colaborando con otros equipos.
           </p>
 
           <div className={styles.downloadContainer}>
