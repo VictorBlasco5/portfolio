@@ -172,7 +172,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <a href="https://lioncapitalg.com" target="_blank" rel="noopener noreferrer" className={styles.buttonLive}>
+        <a href="https://final-project-frontend-nhjn.onrender.com/" target="_blank" rel="noopener noreferrer" className={styles.buttonLive}>
           Live
         </a>
       </div>
